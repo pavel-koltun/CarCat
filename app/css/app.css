@@ -1,0 +1,268 @@
+/* app css stylesheet */
+body {
+    background: #232323;
+    padding-bottom: 20px;
+}
+
+.car-description {
+    margin: 10px 30px 20px;
+}
+
+.cars-container {
+    font-family: helvetica, sans-serif;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.row-centered {
+    text-align:center;
+    margin-bottom: 10px;
+}
+
+.col-centered {
+    display: inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+    padding-right: 5px;
+}
+
+.title h1,
+.title h2 {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.title h1 {
+    margin-bottom: 0;
+}
+
+.title h2 {
+    margin: 0 0 10px 50px;
+}
+
+.title a {
+    display: inline;
+}
+
+.title a:hover {
+    text-decoration: none;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+}
+
+.title a:active {
+    outline: none;
+}
+
+.logo h1,
+.logo h2 {
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+}
+
+.logo h1 {
+    font-size: 64px;
+    color: #aaaaaa;
+    margin: 60px 0 0 0;
+}
+
+.logo h2 {
+    color: #bbbbbb;
+    margin: 0 0 40px 0;
+}
+
+h4 {
+    text-align: center;
+    color: #ccc;
+}
+
+div {
+    color: #fff;
+}
+
+.car-title {
+    margin-top: 0px;
+}
+
+img.car-image {
+    max-height: 200px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 1);
+    margin: 0 0 20px ;
+}
+
+img.car-image-thumb {
+    max-height: 100px;
+    max-width: 200px;
+    margin: 0 auto;
+    cursor: pointer;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+ul.specs {
+    clear: both;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.specs > li{
+    display: inline-block;
+    width: 200px;
+    vertical-align: top;
+}
+
+ul.specs > li > span{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+ul.specs > li > p {
+}
+
+ul.specs p > span {
+    font-weight: bold;
+    color: #008000;
+}
+
+ul.specs p > span.none {
+    font-weight: 100;
+    color: #ff0000;
+}
+
+ul.specs dl {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+ul.specs dt {
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+ul.specs dd p {
+    margin: 0 0 0 10px;
+}
+
+#cars div {
+    height: 200px;
+    background-size: cover;
+    position: relative;
+    margin: 20px 0 0 0;
+    border-radius: 12px;
+}
+
+#cars p {
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 100%;
+    color: rgba(255,255,255,1);
+    background: black;
+    background: linear-gradient(bottom, rgba(0,0,0,.6), rgba(0,0,0,.2));
+    background: -webkit-linear-gradient(bottom, rgba(0,0,0,.6), rgba(0,0,0,.4));
+    background: -moz-linear-gradient(bottom, rgba(0,0,0,.6), rgba(0,0,0,.4));
+    padding: 10px;
+    line-height: 28px;
+    text-align: justify;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    cursor: hand;
+    color: #fff;
+}
+
+.price {
+    float: right;
+}
+
+#search input[type="text"] {
+    background: #777;
+    border: 0 none;
+    font: 14px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #DDD;
+    width: 100%;
+    height: 30px;
+    padding: 6px 15px 6px 15px;
+    margin-bottom: 15px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -webkit-transition: all 2s linear 0s;
+    -moz-transition: all 2s linear 0s;
+    -o-transition: all 2s linear 0s;
+    transition: all 2s linear 0s;
+}
+
+#search input[type="text"]:focus {
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+#sort {
+    background: #777;
+    border: 0 none;
+    font: 14px 'Roboto Condensed', sans-serif;
+    color: #DDD;
+    width: 100%;
+    height: 30px;
+    padding: 3px 15px 3px 15px;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -webkit-transition: all 2s linear 0s;
+    -moz-transition: all 2s linear 0s;
+    -o-transition: all 2s linear 0s;
+    transition: all 2s linear 0s;
+}
+#sort option:hover {
+    color: #1B517E;
+}
+#sort:focus {
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+@media (max-width: 600px) {
+    .logo h1 {
+        font-family: 'Fira Sans', sans-serif;
+        text-align: center;
+        font-size: 32px;
+        color: #aaaaaa;
+        margin: 60px 0 0 0;
+    }
+
+    .logo h2 {
+        font-family: 'Fira Sans', sans-serif;
+        text-align: center;
+        font-size: 18px;
+        color: #bbbbbb;
+        margin: 0px 0 40px 0;
+    }
+
+    .title h1 {
+        font-size: 32px;
+    }
+
+    .title h1 {
+        font-size: 18px;
+    }
+}

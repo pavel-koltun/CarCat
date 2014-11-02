@@ -1,0 +1,33 @@
+{
+    "carId": "octavia",
+    "about": "A class of its own",
+    "brand": "Skoda",
+    "model": "Octavia",
+    "price": 15700,
+    "year": 2014,
+    "engine": {
+        "fuel": "petrol",
+        "capacity": 1400,
+        "gearbox": "manual"
+    },
+    "images": [
+        "cars/images/octavia.jpg",
+        "cars/images/octavia.0.jpg",
+        "cars/images/octavia.1.jpg",
+        "cars/images/octavia.2.jpg",
+        "cars/images/octavia.3.jpg"
+    ],
+    "airConditioning": true,
+    "leatherInterior": false,
+    "alloyWheels": true,
+    "xenon": false,
+    "parkingSenors": {
+        "front": true,
+        "rear": true
+    },
+    "heatedSeats": true,
+    "abs": true,
+    "esp": true,
+    "navigation": true,
+    "handsFree": false
+}

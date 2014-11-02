@@ -1,0 +1,26 @@
+[
+    {
+        "carId":"fabia",
+        "name":"SKODA Fabia",
+        "description":"Family's choice with many virtues.",
+        "year":2013,
+        "price":10990,
+        "image": "cars/images/fabia.jpg"
+    },
+    {
+        "carId":"rapid",
+        "name":"SKODA Rapid",
+        "description":"They'll love you for it.",
+        "year":2014,
+        "price":12500,
+        "image": "cars/images/rapid.jpg"
+    },
+    {
+        "carId":"octavia",
+        "name":"SKODA Octavia",
+        "description":"A class of its own",
+        "year":2013,
+        "price":15700,
+        "image": "cars/images/octavia.jpg"
+    }
+]

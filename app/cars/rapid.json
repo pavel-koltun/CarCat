@@ -1,0 +1,32 @@
+{
+    "carId": "octavia",
+    "about": "They'll love you for it.",
+    "brand": "Skoda",
+    "model": "Rapid",
+    "price": 12500,
+    "year": 2014,
+    "engine": {
+        "fuel": "petrol",
+        "capacity": 1600,
+        "gearbox": "manual"
+    },
+    "images": [
+        "cars/images/rapid.jpg",
+        "cars/images/rapid.0.jpg",
+        "cars/images/rapid.1.jpg",
+        "cars/images/rapid.2.jpg"
+    ],
+    "airConditioning": true,
+    "leatherInterior": false,
+    "alloyWheels": true,
+    "xenon": false,
+    "parkingSenors": {
+        "front": false,
+        "rear": false
+    },
+    "heatedSeats": false,
+    "abs": true,
+    "esp": true,
+    "navigation": true,
+    "handsFree": true
+}

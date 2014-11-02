@@ -1,0 +1,32 @@
+{
+    "carId": "fabia",
+    "about": "Family's choice with many virtues.",
+    "brand": "Skoda",
+    "model": "Fabia",
+    "price": 10990,
+    "year": 2014,
+    "engine": {
+        "fuel": "petrol",
+        "capacity": 1200,
+        "gearbox": "manual"
+    },
+    "images": [
+        "cars/images/fabia.jpg",
+        "cars/images/fabia.0.jpg",
+        "cars/images/fabia.1.jpg",
+        "cars/images/fabia.2.jpg"
+    ],
+    "airConditioning": true,
+    "leatherInterior": false,
+    "alloyWheels": true,
+    "xenon": false,
+    "parkingSenors": {
+        "front": false,
+        "rear": true
+    },
+    "heatedSeats": false,
+    "abs": true,
+    "esp": true,
+    "navigation": false,
+    "handsFree": false
+}

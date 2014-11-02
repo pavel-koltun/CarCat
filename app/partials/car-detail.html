@@ -1,0 +1,88 @@
+<div class="container-fluid car-description">
+    <div class="row title">
+            <h1><a href="#">&#8617;</a> {{car.brand}} {{car.model}}
+                <small>{{car.about}}</small>
+            </h1>
+    </div>
+    <div class="row">
+        <div class="col-md-3 col-sm-3">
+            <div class="row">
+                <img src="" ng-src="{{mainCarImage}}" class="car-image img-responsive">
+            </div>
+        </div>
+        <div class="col-md-9 col-sm-9">
+            <div class="row">
+                <ul>
+                    <li><b>Brand:</b> {{car.brand}}</li>
+                    <li><b>Model:</b> {{car.model}}</li>
+                    <li><b>Year:</b> {{car.year}}</li>
+                    <li><b>Price:</b> {{car.price | currency:'\u20AC'}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-centered">
+        <div class="col-xs-5 col-sm-2 col-md-2 col-centered" data-ng-repeat="image in car.images">
+            <img src=""
+                 ng-click="setImage(image)"
+                 ng-src="{{image}}"
+                 class="img-responsive car-image-thumb">
+        </div>
+    </div>
+
+    <div class="row">
+        <ul class="specs">
+            <li>
+                <span>Engine</span>
+                <dl>
+                    <dt>{{car.engine.capacity}}cc {{car.engine.fuel}}</dt>
+                    <dd><p>Gearbox: {{car.engine.gearbox}}</p></dd>
+                </dl>
+            </li>
+            <li>
+                <span>Security & Environment</span>
+
+                <p><span ng-class="{none: !car.abs}">{{car.abs | checker}}</span> ABS</p>
+
+                <p><span>{{car.esp | checker}}</span> ESP</p>
+            </li>
+            <li>
+                <span>Comfort</span>
+
+                <p><span ng-class="{none: !car.airConditioning}">{{car.airConditioning | checker}}</span> Air
+                    conditioning</p>
+
+                <p><span ng-class="{none: !car.navigation}">{{car.navigation | checker}}</span> Navigation</p>
+
+                <p><span ng-class="{none: !car.handsFree}">{{car.handsFree | checker}}</span> Hands Free</p>
+                <dl>
+                    <dt>Parking sensors</dt>
+                    <dd>
+                        <p><span
+                                ng-class="{none: !car.parkingSenors.front}">{{car.parkingSenors.front | checker}}</span>
+                            Front</p>
+
+                        <p><span ng-class="{none: !car.parkingSenors.rear}">{{car.parkingSenors.rear | checker}}</span>
+                            Rear</p>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <span>Interior</span>
+
+                <p><span ng-class="{none: !car.leatherInterior}">{{car.leatherInterior | checker}}</span> Leather
+                    interior</p>
+
+                <p><span ng-class="{none: !car.heatedSeats}">{{car.heatedSeats | checker}}</span> Heated seats</p>
+            </li>
+            <li>
+                <span>Exterior</span>
+
+                <p><span ng-class="{none: !car.alloyWheels}">{{car.alloyWheels | checker}}</span> Alloy wheels</p>
+
+                <p><span ng-class="{none: !car.xenon}">{{car.xenon | checker}}</span> Xenon</p>
+            </li>
+        </ul>
+    </div>
+</div>
