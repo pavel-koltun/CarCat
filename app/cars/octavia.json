@@ -17,6 +17,18 @@
         "cars/images/octavia.2.jpg",
         "cars/images/octavia.3.jpg"
     ],
+    "reviews": [
+        {
+            "stars": 5,
+            "body": "Good",
+            "author": "asaq*ail.com"
+        },
+        {
+            "stars": 4,
+            "body": "Not bad ;)",
+            "author": "msad*ail.com"
+        }
+    ],
     "airConditioning": true,
     "leatherInterior": false,
     "alloyWheels": true,

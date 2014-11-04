@@ -1,6 +1,6 @@
 {
     "carId": "fabia",
-    "about": "Family's choice with many virtues.",
+    "about": "",
     "brand": "Skoda",
     "model": "Fabia",
     "price": 10990,
@@ -15,6 +15,8 @@
         "cars/images/fabia.0.jpg",
         "cars/images/fabia.1.jpg",
         "cars/images/fabia.2.jpg"
+    ],
+    "reviews": [
     ],
     "airConditioning": true,
     "leatherInterior": false,

@@ -16,6 +16,18 @@
         "cars/images/rapid.1.jpg",
         "cars/images/rapid.2.jpg"
     ],
+    "reviews": [
+        {
+            "stars": 5,
+            "body": "Great car ever",
+            "author": "din*ail.com"
+        },
+        {
+            "stars": 3,
+            "body": "Good car",
+            "author": "max1*ail.com"
+        }
+    ],
     "airConditioning": true,
     "leatherInterior": false,
     "alloyWheels": true,
