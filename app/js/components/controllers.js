@@ -16,4 +16,14 @@
             $scope.mainCarImage = imageUrl;
         };
     }]);
+
+    controllers.controller('VehicleReviewController', function() {
+        this.review = {};
+
+        this.addReview = function(car) {
+            this.review.date = new Date();
+            car.reviews.push(this.review);
+            this.review = {};
+        }
+    });
 })();

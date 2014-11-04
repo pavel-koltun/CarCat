@@ -7,11 +7,11 @@
     </div>
     <div class="row">
         <div class="row">
-            <form class="col-md-4 col-md-offset-0 col-xs-offset-1 col-xs-4" action="#" id="search">
-                <input data-ng-model="searchQuery.name" class="col-sm-12" type="text" size="40"
+            <form class="col-md-5 col-md-offset-0 col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10" action="#" id="search">
+                <input data-ng-model="searchQuery.name" type="text" size="40"
                        placeholder="Search model..."/>
             </form>
-            <form class="col-md-3 col-md-offset-5 col-xs-4 col-xs-offset-2" action="#">
+            <form class="col-md-5 col-md-offset-2 col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10" action="#">
                 <select id="sort" class="input-lg form-control" data-ng-model="orderProp">
                     <option value="name">A-Z</option>
                     <option value="-name">Z-A</option>
@@ -31,7 +31,7 @@
         <div data-ng-style="{'background-image':'url({{car.image}})'}"
              data-ng-repeat="car in filtered = (cars | filter:searchQuery) | orderBy:orderProp">
             <a href="#/cars/{{car.carId}}">
-                <p>{{car.name}} ({{car.year}}) <span class="price">{{car.price | currency:'\u20AC'}}</span><br/>
+                <p>{{car.name}} ({{car.year}}) <span class="price">{{car.price | currency:'\u20AC':'0'}}</span><br/>
                     <small>{{car.description}}</small>
                 </p>
 

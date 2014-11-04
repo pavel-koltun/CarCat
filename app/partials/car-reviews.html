@@ -1,0 +1,47 @@
+<div class="row reviews">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <ul>
+                <li ng-repeat="review in car.reviews">
+                    <blockquote>
+                        <strong>{{review.stars}} Stars</strong>
+                        {{review.body}}
+                        <cite class="clearfix">— by {{review.author}} {{review.date | date:"MM.dd.yyyy 'at' HH:mm"}}</cite>
+                    </blockquote>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12 review-form">
+            <form name="reviewForm" ng-controller="VehicleReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(car)">
+                <!--  Live Preview -->
+                <blockquote>
+                    <strong>{{reviewCtrl.review.stars}} Stars</strong>
+                    {{reviewCtrl.review.body}}
+                    <cite class="clearfix">—{{reviewCtrl.review.author}}</cite>
+                </blockquote>
+
+                <!--  Review Form -->
+                <fieldset class="form-group">
+                    <select ng-model="reviewCtrl.review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]"
+                            title="Stars">
+                        <option value>Rate this car</option>
+                    </select>
+                </fieldset>
+                <fieldset class="form-group">
+                    <textarea ng-model="reviewCtrl.review.body" class="form-control"
+                              placeholder="Write a short review of the product..." title="Review"></textarea>
+                </fieldset>
+                <fieldset class="form-group">
+                    <input ng-model="reviewCtrl.review.author" type="email" class="form-control" placeholder="jimmyDean@example.org"
+                           title="Email"/>
+                </fieldset>
+                <fieldset class="form-group">
+                    <input type="submit" class="btn btn-primary pull-right" value="Submit Review"/>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

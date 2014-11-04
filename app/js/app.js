@@ -1,5 +1,5 @@
 (function () {
-    var app = angular.module('carApp', ['myControllers', 'myServices', 'myFilters', 'ngRoute']);
+    var app = angular.module('carApp', ['myControllers', 'myServices', 'myFilters', 'myDirectives', 'ngRoute']);
 
     app.config(['$routeProvider',
         function($routeProvider) {
