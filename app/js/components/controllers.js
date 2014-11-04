@@ -2,7 +2,6 @@
     var controllers = angular.module('myControllers', [])
 
     controllers.controller('VehicleListController', ['$scope', '$http', 'CarService', function($scope, $http, CarService) {
-//        $scope.cars = [];
         $scope.cars = CarService.query();
         $scope.orderProp = "name";
     }]);
