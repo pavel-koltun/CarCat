@@ -1,0 +1,108 @@
+.car-view.ng-enter,
+.car-view.repeat-car.ng-leave {
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -ms-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+    position: relative;
+    display: block;
+}
+
+.car-view.ng-enter,
+.car-view.ng-leave.ng-leave-active {
+    opacity: 0;
+    left: -50px;
+    height: 40px;
+}
+
+.car-view.ng-leave,
+.car-view.ng-enter.ng-enter-active {
+    opacity: 1;
+    left: 0;
+    height: 40px;
+}
+
+.repeat-car {
+    -webkit-transition: top 0.5s ease-in-out;
+    -moz-transition: top 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out;
+}
+
+.repeat-car.ng-enter,
+.repeat-car.ng-leave,
+.repeat-car.ng-move {
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -ms-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+    position: relative;
+    display: block;
+}
+
+.repeat-car.ng-enter,
+.repeat-car.ng-move {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.repeat-car.ng-move.ng-move-active,
+.repeat-car.ng-enter.ng-enter-active {
+    opacity: 1;
+    height: 200px;
+}
+
+.repeat-car.ng-enter,
+.repeat-car.ng-leave.ng-leave-active {
+    opacity: 0;
+    left: -50px;
+    height: 0;
+}
+
+.repeat-car.ng-leave.ng-leave-active {
+    opacity: 0;
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.repeat-car.ng-leave,
+.repeat-car.ng-enter.ng-enter-active {
+    opacity: 1;
+    left: 0;
+    height: 40px;
+    overflow: hidden;
+}
+
+.animated-tab {
+    position: relative;
+    height: 0;
+}
+
+.animated-tab.ng-hide-add,
+.animated-tab.ng-hide-remove {
+    /* remember to add this */
+    display:block!important;
+    opacity:1;
+}
+
+.animated-tab.ng-hide-add {
+    -webkit-transition: 0.2s linear all;
+    transition: 0.2s linear all;
+}
+
+.animated-tab.ng-hide-remove {
+    -webkit-transition:0.8s linear all;
+    transition:0.8s linear all;
+}
+
+.animated-tab.ng-hide-remove-active {
+    position: relative;
+    height: 0;
+}
+
+.animated-tab.ng-hide {
+    opacity:0;
+}

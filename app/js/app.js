@@ -1,5 +1,5 @@
 (function () {
-    var app = angular.module('carApp', ['myControllers', 'myServices', 'myFilters', 'myDirectives', 'ngRoute']);
+    var app = angular.module('carApp', ['ngAnimate', 'myControllers', 'myServices', 'myFilters', 'myDirectives', 'ngRoute']);
 
     app.config(['$routeProvider',
         function($routeProvider) {
@@ -18,6 +18,8 @@
                     redirectTo: '/cars'
                 });
         }]);
+
+
 
     app.run(['$location', '$rootScope', function($location, $rootScope) {
         $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {

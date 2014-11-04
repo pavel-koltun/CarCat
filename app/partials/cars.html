@@ -28,7 +28,7 @@
     </div>
 
     <div id="cars">
-        <div data-ng-style="{'background-image':'url({{car.image}})'}"
+        <div class="repeat-car" data-ng-style="{'background-image':'url({{car.image}})'}"
              data-ng-repeat="car in filtered = (cars | filter:searchQuery) | orderBy:orderProp">
             <a href="#/cars/{{car.carId}}">
                 <p>{{car.name}} ({{car.year}}) <span class="price">{{car.price | currency:'\u20AC':'0'}}</span><br/>
