@@ -4,6 +4,14 @@ body {
     padding-bottom: 20px;
 }
 
+.message {
+    padding-left: 10px;
+}
+
+.error {
+    color: red;
+}
+
 .car-description {
     margin: 10px 30px 20px;
 }

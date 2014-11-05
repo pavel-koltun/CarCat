@@ -15,28 +15,50 @@
 
     <div class="row">
         <div class="col-md-12 col-sm-12 review-form">
-            <form name="reviewForm" ng-controller="VehicleReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(car)">
+            <form name="reviewForm"
+                  data-ng-controller="VehicleReviewController as reviewController"
+                  data-ng-submit="reviewForm.$valid && reviewController.addReview(car) && reviewForm.$setPristine()" novalidate>
                 <!--  Live Preview -->
                 <blockquote>
-                    <strong>{{reviewCtrl.review.stars}} Stars</strong>
-                    {{reviewCtrl.review.body}}
-                    <cite class="clearfix">—{{reviewCtrl.review.author}}</cite>
+                    <strong>{{reviewController.review.stars}} Stars</strong>
+                    {{reviewController.review.body}}
+                    <cite class="clearfix">—{{reviewController.review.author}}</cite>
                 </blockquote>
 
                 <!--  Review Form -->
                 <fieldset class="form-group">
-                    <select ng-model="reviewCtrl.review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]"
-                            title="Stars">
+                    <select name="stars" ng-model="reviewController.review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]"
+                            title="Stars" required>
                         <option value>Rate this car</option>
                     </select>
+                    <div data-ng-messages="reviewForm.stars.$error">
+                        <div class="message"
+                             data-ng-message="required">
+                            Please, rate this car
+                        </div>
+                    </div>
                 </fieldset>
                 <fieldset class="form-group">
-                    <textarea ng-model="reviewCtrl.review.body" class="form-control"
-                              placeholder="Write a short review of the product..." title="Review"></textarea>
+                    <textarea name="reviewBody" ng-model="reviewController.review.body" class="form-control"
+                              placeholder="Write a short review of the product..." title="Review" required></textarea>
+                    <div data-ng-messages="reviewForm.reviewBody.$error">
+                        <div class="message"
+                             data-ng-message="required">
+                            Please, describe your impressions
+                        </div>
+                    </div>
                 </fieldset>
                 <fieldset class="form-group">
-                    <input ng-model="reviewCtrl.review.author" type="email" class="form-control" placeholder="jimmyDean@example.org"
-                           title="Email"/>
+                    <input name="email" ng-model="reviewController.review.author" type="email" class="form-control" placeholder="jimmyDean@example.org"
+                           title="Email" required/>
+                    <div data-ng-messages="reviewForm.email.$error">
+                        <div class="message" data-ng-message="required">
+                            Please, enter you email address
+                        </div>
+                        <div class="error" data-ng-message="email">
+                            You did not enter your email address correctly...
+                        </div>
+                    </div>
                 </fieldset>
                 <fieldset class="form-group">
                     <input type="submit" class="btn btn-primary pull-right" value="Submit Review"/>
