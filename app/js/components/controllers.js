@@ -23,6 +23,7 @@
             this.review.date = new Date();
             car.reviews.push(this.review);
             this.review = {};
-        }
+            return true; //This is used for form clean-up after adding review
+        };
     });
 })();
